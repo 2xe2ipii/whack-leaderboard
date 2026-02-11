@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #f8f0e3; /* Cream background */
+  --color-brand-yellow: #ffde59;
+  --color-brand-blue: #7cb9e8;
+  --color-brand-green: #c1e1c1;
+  --color-brand-red: #ff6961;
+  --font-display: "Arial Black", "Arial", sans-serif;
+}
+
+/* Custom Utilities for that "Hard" look */
+@layer utilities {
+  .neo-box {
+    @apply border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all;
+  }
+  .neo-box:active {
+    @apply translate-x-[2px] translate-y-[2px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)];
+  }
+  .neo-input {
+    @apply w-full border-4 border-black p-4 text-2xl font-bold uppercase outline-none focus:bg-yellow-50;
+  }
+  .neo-btn {
+    @apply cursor-pointer font-black uppercase tracking-wider;
+  }
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  font-family: 'Courier New', Courier, monospace; /* Retro tech feel */
+}
